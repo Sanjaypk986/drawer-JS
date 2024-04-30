@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.menu-toggle {
+  display: none; /* Hide menu toggle icon by default */
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar-links li {
+  padding: 0 10px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none; /* Hide navbar links by default on smaller screens */
+      flex-direction: column;
+      gap: 10px;
+      position: fixed;
+      top: 50px; /* Adjust top position to avoid overlapping with navbar */
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      margin-top: 0;
+      padding: 1rem;
+      transition: 0.4s ease-in-out;
+  }
+  .navbar-links.show {
+      display: flex;
+       /* Show navbar links when .show class is applied */
+  }
+
+  .menu-toggle {
+      display: block; /* Display menu toggle icon on smaller screens */
+  }
+}
